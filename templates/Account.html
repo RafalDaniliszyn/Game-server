@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Spring CMS</title>
+</head>
+<body>
+<h1 th:text="${login}"></h1>
+<form th:action="@{/mvc/password}" method="post">
+    <p><input type="text" th:field="${loginData.name}" /></p>
+    <p><input type="text" th:field="${loginData.password}" /></p>
+    <p><input type="submit" value="Enter" /></p>
+</form>
+<a href="/home">
+    <button>Home</button>
+</a>
+</body>
+</html>
